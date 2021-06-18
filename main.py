@@ -14,21 +14,17 @@ from lxml import etree
 from urllib.parse import urlencode
 import feigua
 
-
-
 def data_process(data):
-	data_Tuple = ()
-	for i in data:
-	    data_Tuple = data_Tuple + i
-	data_List = []
-	for i in data_Tuple:
-	    data_List = data_List + i
-	return data_List
-
+    data_Tuple = ()
+    for i in data:
+        data_Tuple = data_Tuple + i
+    data_List = []
+    for i in data_Tuple:
+        data_List = data_List + i
+    return data_List
 
 
 cookie = """"""
-
 #读取文件
 df = pd.read_excel("CK补充达人.xlsx")
 #用户列表
@@ -73,7 +69,7 @@ for nick in nicknames:
         print("*"*50)
 
 
-### 数据处理
+### 个人主页数据处理
 overview_header = ["原始昵称", "昵称","粉丝数(万)","id","uid"]
 filname = "CK补充达人飞瓜抖音粉丝TOP" + str(len(overview)) + ".csv"
 details=pd.DataFrame(columns=overview_header,data=overview)
